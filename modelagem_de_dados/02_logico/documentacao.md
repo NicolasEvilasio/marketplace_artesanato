@@ -25,6 +25,7 @@ ___
   
 - **Produto:**
   - idProduto (PK)
+  - categoriaProduto
   - nomeProduto
   - descricaoProduto
   - precoProduto
