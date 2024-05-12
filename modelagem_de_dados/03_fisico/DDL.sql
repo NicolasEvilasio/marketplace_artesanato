@@ -1,4 +1,4 @@
-CREATE TABLE Produto
+CREATE TABLE Produtos
 (
  idProduto SERIAL PRIMARY KEY,
  nomeProduto CHAR(50) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE Produto
  CHECK (precoProduto > 0)
 );
 
-CREATE TABLE Estoque
+CREATE TABLE Estoques
 (
  idEstoque SERIAL PRIMARY KEY,
  quantidadeProdutoEstoque INT NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE Estoque
  CHECK (quantidadeProdutoEstoque > 0)
 );
 
-CREATE TABLE Cliente
+CREATE TABLE Clientes
 (
  idCliente SERIAL PRIMARY KEY,
  nomeCliente VARCHAR(255) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE Cliente
  UNIQUE (cpfCliente,emailCliente,telefoneCelularCliente)
 );
 
-CREATE TABLE Venda
+CREATE TABLE Vendas
 (
  idVenda SERIAL PRIMARY KEY,
  dataVenda DATE NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE Venda
  CHECK (totalQuantidadeProdutoVenda > 0 AND totalValorVenda >= 0)
 );
 
-CREATE TABLE ItemVenda
+CREATE TABLE ItensVenda
 (
  idItemVenda SERIAL PRIMARY KEY,
  quantidadeItemVenda INT NOT NULL,
@@ -53,18 +53,18 @@ CREATE TABLE ItemVenda
  CHECK (quantidadeItemVenda > 0 AND precoUnitarioItemVenda >= 0)
 );
 
-CREATE TABLE Loja
+CREATE TABLE Lojas
 (
  idLoja SERIAL PRIMARY KEY,
  idCliente INT NOT NULL,
  nomeLoja VARCHAR(255) NOT NULL
 );
 
-ALTER TABLE Produto ADD FOREIGN KEY(idLoja) REFERENCES Loja (idLoja);
-ALTER TABLE Estoque ADD FOREIGN KEY(idLoja) REFERENCES Loja (idLoja);
-ALTER TABLE Estoque ADD FOREIGN KEY(idProduto) REFERENCES Produto (idProduto);
-ALTER TABLE Cliente ADD FOREIGN KEY(idVenda) REFERENCES Venda (idVenda);
-ALTER TABLE Venda ADD FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente);
-ALTER TABLE ItemVenda ADD FOREIGN KEY(idProduto) REFERENCES Produto (idProduto);
-ALTER TABLE ItemVenda ADD FOREIGN KEY(idVenda) REFERENCES Venda (idVenda);
-ALTER TABLE Loja ADD FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente);
+ALTER TABLE Produtos ADD FOREIGN KEY(idLoja) REFERENCES Lojas (idLoja);
+ALTER TABLE Estoques ADD FOREIGN KEY(idLoja) REFERENCES Lojas (idLoja);
+ALTER TABLE Estoques ADD FOREIGN KEY(idProduto) REFERENCES Produtos (idProduto);
+ALTER TABLE Clientes ADD FOREIGN KEY(idVenda) REFERENCES Vendas (idVenda);
+ALTER TABLE Vendas ADD FOREIGN KEY(idCliente) REFERENCES Clientes (idCliente);
+ALTER TABLE ItensVenda ADD FOREIGN KEY(idProduto) REFERENCES Produtos (idProduto);
+ALTER TABLE ItensVenda ADD FOREIGN KEY(idVenda) REFERENCES Vendas (idVenda);
+ALTER TABLE Lojas ADD FOREIGN KEY(idCliente) REFERENCES Clientes (idCliente);
