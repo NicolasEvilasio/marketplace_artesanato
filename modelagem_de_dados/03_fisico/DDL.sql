@@ -1,6 +1,7 @@
 CREATE TABLE Produtos
 (
  idProduto SERIAL PRIMARY KEY,
+ categoriaProduto CHAR(50),
  nomeProduto CHAR(50) NOT NULL,
  descricaoProduto TEXT,
  precoProduto FLOAT NOT NULL,
@@ -14,7 +15,7 @@ CREATE TABLE Estoques
  quantidadeProdutoEstoque INT NOT NULL,
  idLoja INT NOT NULL,
  idProduto INT,
- CHECK (quantidadeProdutoEstoque > 0)
+ CHECK (quantidadeProdutoEstoque >= 0)
 );
 
 CREATE TABLE Clientes
