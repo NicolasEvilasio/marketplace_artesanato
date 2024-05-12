@@ -29,7 +29,6 @@ CREATE TABLE Clientes
  bairroCliente VARCHAR(255) NOT NULL,
  cepCliente CHAR(8) NOT NULL,
  tipoCliente VARCHAR(9) NOT NULL DEFAULT 'comprador',
- idVenda INT,
  UNIQUE (cpfCliente,emailCliente,telefoneCelularCliente)
 );
 
@@ -39,7 +38,8 @@ CREATE TABLE Vendas
  dataVenda DATE NOT NULL,
  totalQuantidadeProdutoVenda INT NOT NULL,
  totalValorVenda FLOAT NOT NULL,
- idCliente INT NOT NULL,
+ idClienteVendedor INT NOT NULL,
+ idClienteComprador INT NOT NULL,
  CHECK (totalQuantidadeProdutoVenda > 0 AND totalValorVenda >= 0)
 );
 
@@ -64,7 +64,8 @@ ALTER TABLE Produtos ADD FOREIGN KEY(idLoja) REFERENCES Lojas (idLoja);
 ALTER TABLE Estoques ADD FOREIGN KEY(idLoja) REFERENCES Lojas (idLoja);
 ALTER TABLE Estoques ADD FOREIGN KEY(idProduto) REFERENCES Produtos (idProduto);
 ALTER TABLE Clientes ADD FOREIGN KEY(idVenda) REFERENCES Vendas (idVenda);
-ALTER TABLE Vendas ADD FOREIGN KEY(idCliente) REFERENCES Clientes (idCliente);
+ALTER TABLE Vendas ADD FOREIGN KEY(idClienteVendedor) REFERENCES Clientes (idCliente);
+ALTER TABLE Vendas ADD FOREIGN KEY(idClienteComprador) REFERENCES Clientes (idCliente);
 ALTER TABLE ItensVenda ADD FOREIGN KEY(idProduto) REFERENCES Produtos (idProduto);
 ALTER TABLE ItensVenda ADD FOREIGN KEY(idVenda) REFERENCES Vendas (idVenda);
 ALTER TABLE Lojas ADD FOREIGN KEY(idCliente) REFERENCES Clientes (idCliente);
