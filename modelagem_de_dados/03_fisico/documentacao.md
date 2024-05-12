@@ -14,6 +14,7 @@ O banco de dados consiste nas seguintes tabelas:
 
 ### Tabela Produtos:
 - `idProduto`: Identificador único do produto (chave primária).
+- `categoriaProduto`: Categoria do produto
 - `nomeProduto`: Nome do produto.
 - `descricaoProduto`: Descrição do produto.
 - `precoProduto`: Preço do produto.
@@ -37,8 +38,7 @@ O banco de dados consiste nas seguintes tabelas:
 - `numeroEnderecoCliente`: Número do endereço do cliente.
 - `bairroCliente`: Bairro do cliente.
 - `cepCliente`: CEP do cliente.
-- `tipoCliente`: Tipo de cliente (comprador ou vendedor).
-- `idVenda`: Identificador da venda associada ao cliente.
+- `tipoCliente`: Tipo de cliente (comprador, vendedor ou dual).
 - `CONSTRAINT UNIQUE`: Garante a unicidade do CPF, e-mail e número de telefone celular do cliente.
 
 ### Tabela Vendas:
@@ -46,7 +46,8 @@ O banco de dados consiste nas seguintes tabelas:
 - `dataVenda`: Data da venda.
 - `totalQuantidadeProdutoVenda`: Total de produtos vendidos.
 - `totalValorVenda`: Valor total da venda.
-- `idCliente`: Identificador do cliente associado à venda.
+- `idClienteVendedor`: Identificador do vendedor associado à venda.
+- `idClienteComprador`: Identificador do comprador associado à venda.
 - `CONSTRAINT CHECK`: Verifica se o total de produtos vendidos é maior que 0 e se o valor total da venda é maior ou igual a 0.
 
 ### Tabela ItensVenda:
@@ -70,8 +71,7 @@ As tabelas estão relacionadas da seguinte forma:
 
 - A tabela Produtos possui uma chave estrangeira (`idLoja`) que referencia a tabela Lojas.
 - A tabela Estoques possui duas chaves estrangeiras: `idLoja` (referenciando a tabela Lojas) e `idProduto` (referenciando a tabela Produtos).
-- A tabela Clientes possui uma chave estrangeira (`idVenda`) que referencia a tabela Vendas.
-- A tabela Vendas possui uma chave estrangeira (`idCliente`) que referencia a tabela Clientes.
+- A tabela Vendas possui duas chaves estrangeiras (`idClienteVendedor` e {`idClienteComprador`) que referenciam a tabela Clientes.
 - A tabela ItensVenda possui duas chaves estrangeiras: `idProduto` (referenciando a tabela Produtos) e `idVenda` (referenciando a tabela Vendas).
 - A tabela Lojas possui uma chave estrangeira (`idCliente`) que referencia a tabela Clientes.
 
