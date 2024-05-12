@@ -68,6 +68,10 @@
   - Um Estoque está associado a uma única Loja (1:1).
   - Uma Loja pode ter vários Estoques (1:N).
 
+- **Produto para ItemVenda:**
+  - Cada Produto pode ser vendido em vários ItemVenda (1:N)
+  - Cada ItemVenda está associado à apenas um Produto (1:1)
+  
 - **Venda para ItemVenda:**
   - Uma Venda contém um ou mais Itens de Venda (1:N).
   - Um Item de Venda pertence a uma única Venda (1:1).
@@ -75,3 +79,7 @@
 - **Loja para Cliente:**
   - Uma Loja pode ter vários Clientes (1:N).
   - Um Cliente está associado a no máximo uma Loja (0:1 ou 1:1).
+  
+- **Cliente para Venda:**
+  -  Um Cliente pode estar associado à varias Vendas (1:N)
+  -  Uma Venda pode estar associada à apenas um Cliente (1:1)
