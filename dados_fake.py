@@ -53,22 +53,22 @@ def generate_produtos_data(path: str, file: str, num_rows: int, lojas_rows: int)
 # Função para gerar dados para a tabela Clientes
 def generate_clientes_data(path:str, file: str, tipo_cliente: str, num_rows: int):
     with open(os.path.join(path, file), mode='w', newline='', encoding='utf-8') as csv_file:
-        fieldnames = ['nomeCliente', 'cpfCliente', 'emailCliente', 'telefoneCelularCliente', 'logradouroCliente',
-                      'numeroEnderecoCliente', 'bairroCliente', 'cepCliente', 'tipoCliente']
+        fieldnames = ['nomecliente', 'cpfcliente', 'emailcliente', 'telefonecelularcliente', 'logradourocliente',
+                      'numeroenderecocliente', 'bairrocliente', 'cepcliente', 'tipocliente']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
         writer.writeheader()
         for _ in range(num_rows):
             writer.writerow({
-                'nomeCliente': fake.name(),
-                'cpfCliente': fake.ssn(),
-                'emailCliente': fake.email(),
-                'telefoneCelularCliente': fake.random_number(digits=9, fix_len=True),
-                'logradouroCliente': fake.street_name(),
-                'numeroEnderecoCliente': fake.building_number(),
-                'bairroCliente': fake.bairro(),
-                'cepCliente': fake.postcode().replace('-', ''),
-                'tipoCliente': tipo_cliente
+                'nomecliente': fake.name(),
+                'cpfcliente': fake.ssn(),
+                'emailcliente': fake.email(),
+                'telefonecelularcliente': fake.random_number(digits=9, fix_len=True),
+                'logradourocliente': fake.street_name(),
+                'numeroenderecocliente': fake.building_number(),
+                'bairrocliente': fake.bairro(),
+                'cepcliente': fake.postcode().replace('-', ''),
+                'tipocliente': tipo_cliente
             })
 
 
