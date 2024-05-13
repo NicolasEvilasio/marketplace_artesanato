@@ -1,11 +1,11 @@
-nomeCliente,cpfCliente,emailCliente,telefoneCelularCliente,logradouroCliente,numeroEnderecoCliente,bairroCliente,cepCliente,tipoCliente
-Luana Correia,89237164564,nmelo@example.org,996705334,Largo de Marques,97,Vila Jardim Leblon,87098002,dual
-Gabriel Barros,41627039570,theorios@example.net,281918574,Pátio de Pinto,6,São Bernardo,45870810,dual
-Luiz Henrique Ferreira,24673809122,wrezende@example.net,476115005,Favela Eduarda das Neves,9,Jardim Dos Comerciarios,96327998,dual
-Yan Novaes,61890732478,maitesampaio@example.org,760378108,Viela Allana Sampaio,6,Cardoso,81359705,dual
-Ana Liz Lopes,83206145708,arthur-miguelrios@example.net,308344720,Rua Ana Laura Viana,30,Mantiqueira,30384563,dual
-Dr. Pedro Miguel Garcia,08345967175,sara38@example.com,596458209,Quadra Giovanna Monteiro,89,União,13714426,dual
-Antony Freitas,25497316034,breno21@example.com,215285199,Distrito Lopes,9,Novo Aarão Reis,97801096,dual
-Caleb Viana,84672913546,xbarros@example.net,161171852,Praça Lara Moreira,81,Barão Homem De Melo 1ª Seção,05183308,dual
-Aurora Araújo,35768092447,jda-rosa@example.org,383796202,Viaduto de Cavalcante,397,Marieta 2ª Seção,96901567,dual
-Alana da Conceição,28396475083,elisa00@example.net,184061821,Chácara Fogaça,754,Vila Santa Rosa,36179740,dual
+nomecliente,cpfcliente,emailcliente,telefonecelularcliente,logradourocliente,numeroenderecocliente,bairrocliente,cepcliente,tipocliente
+Benjamin da Conceição,84201563960,danilolopes@example.org,478601941,Jardim da Rocha,5,Outro,42001436,dual
+Vicente Duarte,36254017890,dsa@example.org,306385483,Avenida Alana Costela,37,Vila Nova,66116225,dual
+Sophia Costa,27369580474,andradeeduarda@example.com,296575167,Setor Felipe Nunes,43,Vila Independencia 3ª Seção,09365330,dual
+Kevin Carvalho,24071536934,silveiradaniel@example.net,179428264,Rodovia Garcia,911,Barão Homem De Melo 2ª Seção,16080027,dual
+Maria Júlia Sampaio,83617524044,marinalopes@example.org,939188036,Feira Santos,575,Santa Cecilia,21497572,dual
+Danilo Andrade,36481295700,uleao@example.com,790860143,Passarela Rodrigues,21,Vila São Gabriel,30701837,dual
+Maria Aragão,57284903104,da-matabenicio@example.net,955620354,Pátio de da Mata,49,Floramar,42924285,dual
+Sara Moreira,35061847253,leaocarlos-eduardo@example.net,511524231,Colônia Câmara,5,Mangabeiras,15367831,dual
+Miguel Cunha,04392671534,siqueiramaria-flor@example.com,851010232,Distrito Silva,9,Comiteco,86563637,dual
+Nathan Novaes,45230896124,uramos@example.org,403318386,Praça Vargas,64,Aarão Reis,52382369,dual

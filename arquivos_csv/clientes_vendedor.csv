@@ -1,6 +1,6 @@
-nomeCliente,cpfCliente,emailCliente,telefoneCelularCliente,logradouroCliente,numeroEnderecoCliente,bairroCliente,cepCliente,tipoCliente
-Ester Viana,71950284611,isabela90@example.org,414035398,Recanto Mendonça,330,Vila Havaí,60635413,vendedor
-Juliana das Neves,14096758230,cardosomarcela@example.net,884274862,Lago Renan das Neves,44,Diamante,84825962,vendedor
-Theo da Paz,94850261370,joao-lucas08@example.net,850671060,Condomínio Théo Ribeiro,9,Nova Granada,15279035,vendedor
-Emanuelly Viana,64783521026,garciabruna@example.net,369574592,Viela Freitas,316,Vila Maloca,50318573,vendedor
-Valentim Abreu,09438762574,cpacheco@example.com,995051703,Trevo Natália da Cunha,59,Santa Sofia,65335236,vendedor
+nomecliente,cpfcliente,emailcliente,telefonecelularcliente,logradourocliente,numeroenderecocliente,bairrocliente,cepcliente,tipocliente
+Sra. Amanda Ramos,95407823179,da-rosasabrina@example.net,994437345,Estrada Barbosa,42,Esplanada,18733402,vendedor
+Dr. Bruno Vasconcelos,26071539480,maria-fernandamachado@example.org,686947355,Via Pedro Lucas Jesus,431,Xodo-Marize,56786141,vendedor
+Alexia Ferreira,07863594120,eduarda08@example.org,458839543,Quadra Viana,39,Confisco,89477172,vendedor
+Rafael Pinto,07381625903,ana-sophiasiqueira@example.net,263281840,Condomínio de Ferreira,83,Aparecida 7ª Seção,88052938,vendedor
+Pietro Câmara,92435187041,joao-lucas73@example.com,552966933,Quadra Léo Monteiro,78,Mangabeiras,61709099,vendedor
