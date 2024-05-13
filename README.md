@@ -8,9 +8,11 @@ análise de vendas e promoções.
 ___
 ## Tecnologias utilizadas
 
-<img src="https://www.python.org/static/img/python-logo.png" width=200>
-<img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="Ícone do PostgreSQL" width="50">
-<img src="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" alt="Ícone do Google Cloud Platform" width="120">
+<div style="display: flex; align-items: center;">
+    <img src="https://www.python.org/static/img/python-logo.png" width="200" alt="Logo do Python">
+    <img src="https://www.postgresql.org/media/img/about/press/elephant.png" width="50" alt="Ícone do PostgreSQL">
+    <img src="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" width="120" alt="Ícone do Google Cloud Platform">
+</div>
 
 [//]: # (<img src="https://static-00.iconduck.com/assets.00/power-bi-icon-384x512-bujnuaon.png" alt="Ícone do Power BI" width="40">)
 
